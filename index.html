@@ -1,0 +1,2972 @@
+<!doctype html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>VASAVA KULDIP | MERN Stack Developer</title>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500;700&amp;family=Geist:wght@700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #051424;
+        color: #d4e4fa;
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+      }
+
+      .hero-bg {
+        background-image:
+          linear-gradient(rgba(5, 20, 36, 0.85), rgba(5, 20, 36, 0.85)),
+          url("https://lh3.googleusercontent.com/aida/AP1WRLsguPwVhDb0oLpdF69AB3sE462tTcD6wWUkR7wW2_PH9AZtkuh89powzYsdoR7WRZsBLiyqAMCGji7qOXAojGJyrfypCEQOHM58AQ79MXVFhtLbM39GJv-YrMG2QGJuSkefH3GEEqbcq9PzXlw6ncx3ItOoYQT1BEKSdfVey8521j-QtBdKxAXQEATH8BElFKtQitoly6qETawUmp97KRQVjXGwRfBXIxUJgg51CKPg-xROn_XpEvbhqUuC");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+
+      .grid-pattern {
+        background-image:
+          linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0.03) 1px,
+            transparent 1px
+          ),
+          linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.03) 1px,
+            transparent 1px
+          );
+        background-size: 64px 64px;
+      }
+
+      .glass-card {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .glass-card:hover {
+        border-color: rgba(76, 215, 246, 0.3);
+        background: rgba(255, 255, 255, 0.05);
+        transform: translateY(-4px);
+      }
+
+      .primary-gradient {
+        background: linear-gradient(135deg, #4cd7f6 0%, #d0bcff 100%);
+      }
+
+      .entrance-reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .entrance-reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .nav-link.active {
+        color: #4cd7f6 !important;
+        position: relative;
+      }
+
+      .nav-link.active::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: #4cd7f6;
+        border-radius: 99px;
+      }
+
+      .floating {
+        animation: floating 6s ease-in-out infinite;
+      }
+
+      @keyframes floating {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-15px);
+        }
+      }
+
+      .btn-shine {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .btn-shine::after {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(
+          45deg,
+          transparent,
+          rgba(255, 255, 255, 0.1),
+          transparent
+        );
+        transform: rotate(45deg);
+        transition: 0.6s;
+        opacity: 0;
+      }
+
+      .btn-shine:hover::after {
+        opacity: 1;
+        left: 100%;
+        top: 100%;
+      }
+
+      .stagger-1 {
+        transition-delay: 0.1s;
+      }
+      .stagger-2 {
+        transition-delay: 0.2s;
+      }
+      .stagger-3 {
+        transition-delay: 0.3s;
+      }
+    </style>
+    <style>
+      *,
+      ::before,
+      ::after {
+        --tw-border-spacing-x: 0;
+        --tw-border-spacing-y: 0;
+        --tw-translate-x: 0;
+        --tw-translate-y: 0;
+        --tw-rotate: 0;
+        --tw-skew-x: 0;
+        --tw-skew-y: 0;
+        --tw-scale-x: 1;
+        --tw-scale-y: 1;
+        --tw-pan-x: ;
+        --tw-pan-y: ;
+        --tw-pinch-zoom: ;
+        --tw-scroll-snap-strictness: proximity;
+        --tw-gradient-from-position: ;
+        --tw-gradient-via-position: ;
+        --tw-gradient-to-position: ;
+        --tw-ordinal: ;
+        --tw-slashed-zero: ;
+        --tw-numeric-figure: ;
+        --tw-numeric-spacing: ;
+        --tw-numeric-fraction: ;
+        --tw-ring-inset: ;
+        --tw-ring-offset-width: 0px;
+        --tw-ring-offset-color: #fff;
+        --tw-ring-color: rgb(59 130 246 / 0.5);
+        --tw-ring-offset-shadow: 0 0 #0000;
+        --tw-ring-shadow: 0 0 #0000;
+        --tw-shadow: 0 0 #0000;
+        --tw-shadow-colored: 0 0 #0000;
+        --tw-blur: ;
+        --tw-brightness: ;
+        --tw-contrast: ;
+        --tw-grayscale: ;
+        --tw-hue-rotate: ;
+        --tw-invert: ;
+        --tw-saturate: ;
+        --tw-sepia: ;
+        --tw-drop-shadow: ;
+        --tw-backdrop-blur: ;
+        --tw-backdrop-brightness: ;
+        --tw-backdrop-contrast: ;
+        --tw-backdrop-grayscale: ;
+        --tw-backdrop-hue-rotate: ;
+        --tw-backdrop-invert: ;
+        --tw-backdrop-opacity: ;
+        --tw-backdrop-saturate: ;
+        --tw-backdrop-sepia: ;
+        --tw-contain-size: ;
+        --tw-contain-layout: ;
+        --tw-contain-paint: ;
+        --tw-contain-style: ;
+      }
+      ::backdrop {
+        --tw-border-spacing-x: 0;
+        --tw-border-spacing-y: 0;
+        --tw-translate-x: 0;
+        --tw-translate-y: 0;
+        --tw-rotate: 0;
+        --tw-skew-x: 0;
+        --tw-skew-y: 0;
+        --tw-scale-x: 1;
+        --tw-scale-y: 1;
+        --tw-pan-x: ;
+        --tw-pan-y: ;
+        --tw-pinch-zoom: ;
+        --tw-scroll-snap-strictness: proximity;
+        --tw-gradient-from-position: ;
+        --tw-gradient-via-position: ;
+        --tw-gradient-to-position: ;
+        --tw-ordinal: ;
+        --tw-slashed-zero: ;
+        --tw-numeric-figure: ;
+        --tw-numeric-spacing: ;
+        --tw-numeric-fraction: ;
+        --tw-ring-inset: ;
+        --tw-ring-offset-width: 0px;
+        --tw-ring-offset-color: #fff;
+        --tw-ring-color: rgb(59 130 246 / 0.5);
+        --tw-ring-offset-shadow: 0 0 #0000;
+        --tw-ring-shadow: 0 0 #0000;
+        --tw-shadow: 0 0 #0000;
+        --tw-shadow-colored: 0 0 #0000;
+        --tw-blur: ;
+        --tw-brightness: ;
+        --tw-contrast: ;
+        --tw-grayscale: ;
+        --tw-hue-rotate: ;
+        --tw-invert: ;
+        --tw-saturate: ;
+        --tw-sepia: ;
+        --tw-drop-shadow: ;
+        --tw-backdrop-blur: ;
+        --tw-backdrop-brightness: ;
+        --tw-backdrop-contrast: ;
+        --tw-backdrop-grayscale: ;
+        --tw-backdrop-hue-rotate: ;
+        --tw-backdrop-invert: ;
+        --tw-backdrop-opacity: ;
+        --tw-backdrop-saturate: ;
+        --tw-backdrop-sepia: ;
+        --tw-contain-size: ;
+        --tw-contain-layout: ;
+        --tw-contain-paint: ;
+        --tw-contain-style: ;
+      } /* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */
+      *,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+        border-width: 0;
+        border-style: solid;
+        border-color: #e5e7eb;
+      }
+      ::after,
+      ::before {
+        --tw-content: "";
+      }
+      :host,
+      html {
+        line-height: 1.5;
+        -webkit-text-size-adjust: 100%;
+        -moz-tab-size: 4;
+        tab-size: 4;
+        font-family:
+          ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-feature-settings: normal;
+        font-variation-settings: normal;
+        -webkit-tap-highlight-color: transparent;
+      }
+      body {
+        margin: 0;
+        line-height: inherit;
+      }
+      hr {
+        height: 0;
+        color: inherit;
+        border-top-width: 1px;
+      }
+      abbr:where([title]) {
+        -webkit-text-decoration: underline dotted;
+        text-decoration: underline dotted;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-size: inherit;
+        font-weight: inherit;
+      }
+      a {
+        color: inherit;
+        text-decoration: inherit;
+      }
+      b,
+      strong {
+        font-weight: bolder;
+      }
+      code,
+      kbd,
+      pre,
+      samp {
+        font-family:
+          ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+          "Liberation Mono", "Courier New", monospace;
+        font-feature-settings: normal;
+        font-variation-settings: normal;
+        font-size: 1em;
+      }
+      small {
+        font-size: 80%;
+      }
+      sub,
+      sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+      }
+      sub {
+        bottom: -0.25em;
+      }
+      sup {
+        top: -0.5em;
+      }
+      table {
+        text-indent: 0;
+        border-color: inherit;
+        border-collapse: collapse;
+      }
+      button,
+      input,
+      optgroup,
+      select,
+      textarea {
+        font-family: inherit;
+        font-feature-settings: inherit;
+        font-variation-settings: inherit;
+        font-size: 100%;
+        font-weight: inherit;
+        line-height: inherit;
+        letter-spacing: inherit;
+        color: inherit;
+        margin: 0;
+        padding: 0;
+      }
+      button,
+      select {
+        text-transform: none;
+      }
+      button,
+      input:where([type="button"]),
+      input:where([type="reset"]),
+      input:where([type="submit"]) {
+        -webkit-appearance: button;
+        appearance: button;
+        background-color: transparent;
+        background-image: none;
+      }
+      :-moz-focusring {
+        outline: auto;
+      }
+      :-moz-ui-invalid {
+        box-shadow: none;
+      }
+      progress {
+        vertical-align: baseline;
+      }
+      ::-webkit-inner-spin-button,
+      ::-webkit-outer-spin-button {
+        height: auto;
+      }
+      [type="search"] {
+        -webkit-appearance: textfield;
+        appearance: textfield;
+        outline-offset: -2px;
+      }
+      ::-webkit-search-decoration {
+        -webkit-appearance: none;
+        appearance: none;
+      }
+      ::-webkit-file-upload-button {
+        -webkit-appearance: button;
+        appearance: button;
+        font: inherit;
+      }
+      summary {
+        display: list-item;
+      }
+      blockquote,
+      dd,
+      dl,
+      figure,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      hr,
+      p,
+      pre {
+        margin: 0;
+      }
+      fieldset {
+        margin: 0;
+        padding: 0;
+      }
+      legend {
+        padding: 0;
+      }
+      menu,
+      ol,
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      dialog {
+        padding: 0;
+      }
+      textarea {
+        resize: vertical;
+      }
+      input::placeholder,
+      textarea::placeholder {
+        opacity: 1;
+        color: #9ca3af;
+      }
+      [role="button"],
+      button {
+        cursor: pointer;
+      }
+      :disabled {
+        cursor: default;
+      }
+      audio,
+      canvas,
+      embed,
+      iframe,
+      img,
+      object,
+      svg,
+      video {
+        display: block;
+      }
+      img,
+      video {
+        max-width: 100%;
+        height: auto;
+      }
+      [hidden]:where(:not([hidden="until-found"])) {
+        display: none;
+      }
+      [type="text"],
+      input:where(:not([type])),
+      [type="email"],
+      [type="url"],
+      [type="password"],
+      [type="number"],
+      [type="date"],
+      [type="datetime-local"],
+      [type="month"],
+      [type="search"],
+      [type="tel"],
+      [type="time"],
+      [type="week"],
+      [multiple],
+      textarea,
+      select {
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: #fff;
+        border-color: #6b7280;
+        border-width: 1px;
+        border-radius: 0px;
+        padding-top: 0.5rem;
+        padding-right: 0.75rem;
+        padding-bottom: 0.5rem;
+        padding-left: 0.75rem;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        --tw-shadow: 0 0 #0000;
+      }
+      [type="text"]:focus,
+      input:where(:not([type])):focus,
+      [type="email"]:focus,
+      [type="url"]:focus,
+      [type="password"]:focus,
+      [type="number"]:focus,
+      [type="date"]:focus,
+      [type="datetime-local"]:focus,
+      [type="month"]:focus,
+      [type="search"]:focus,
+      [type="tel"]:focus,
+      [type="time"]:focus,
+      [type="week"]:focus,
+      [multiple]:focus,
+      textarea:focus,
+      select:focus {
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+        --tw-ring-inset: var(--tw-empty, /*!*/ /*!*/);
+        --tw-ring-offset-width: 0px;
+        --tw-ring-offset-color: #fff;
+        --tw-ring-color: #2563eb;
+        --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
+          var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+        --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
+          calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+        box-shadow:
+          var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+        border-color: #2563eb;
+      }
+      input::placeholder,
+      textarea::placeholder {
+        color: #6b7280;
+        opacity: 1;
+      }
+      ::-webkit-datetime-edit-fields-wrapper {
+        padding: 0;
+      }
+      ::-webkit-date-and-time-value {
+        min-height: 1.5em;
+        text-align: inherit;
+      }
+      ::-webkit-datetime-edit {
+        display: inline-flex;
+      }
+      ::-webkit-datetime-edit,
+      ::-webkit-datetime-edit-year-field,
+      ::-webkit-datetime-edit-month-field,
+      ::-webkit-datetime-edit-day-field,
+      ::-webkit-datetime-edit-hour-field,
+      ::-webkit-datetime-edit-minute-field,
+      ::-webkit-datetime-edit-second-field,
+      ::-webkit-datetime-edit-millisecond-field,
+      ::-webkit-datetime-edit-meridiem-field {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      select {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+        background-position: right 0.5rem center;
+        background-repeat: no-repeat;
+        background-size: 1.5em 1.5em;
+        padding-right: 2.5rem;
+        print-color-adjust: exact;
+      }
+      [multiple],
+      [size]:where(select:not([size="1"])) {
+        background-image: initial;
+        background-position: initial;
+        background-repeat: unset;
+        background-size: initial;
+        padding-right: 0.75rem;
+        print-color-adjust: unset;
+      }
+      [type="checkbox"],
+      [type="radio"] {
+        -webkit-appearance: none;
+        appearance: none;
+        padding: 0;
+        print-color-adjust: exact;
+        display: inline-block;
+        vertical-align: middle;
+        background-origin: border-box;
+        -webkit-user-select: none;
+        user-select: none;
+        flex-shrink: 0;
+        height: 1rem;
+        width: 1rem;
+        color: #2563eb;
+        background-color: #fff;
+        border-color: #6b7280;
+        border-width: 1px;
+        --tw-shadow: 0 0 #0000;
+      }
+      [type="checkbox"] {
+        border-radius: 0px;
+      }
+      [type="radio"] {
+        border-radius: 100%;
+      }
+      [type="checkbox"]:focus,
+      [type="radio"]:focus {
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+        --tw-ring-inset: var(--tw-empty, /*!*/ /*!*/);
+        --tw-ring-offset-width: 2px;
+        --tw-ring-offset-color: #fff;
+        --tw-ring-color: #2563eb;
+        --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
+          var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+        --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
+          calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+        box-shadow:
+          var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+      }
+      [type="checkbox"]:checked,
+      [type="radio"]:checked {
+        border-color: transparent;
+        background-color: currentColor;
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      [type="checkbox"]:checked {
+        background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+      }
+      @media (forced-colors: active) {
+        [type="checkbox"]:checked {
+          -webkit-appearance: auto;
+          appearance: auto;
+        }
+      }
+      [type="radio"]:checked {
+        background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
+      }
+      @media (forced-colors: active) {
+        [type="radio"]:checked {
+          -webkit-appearance: auto;
+          appearance: auto;
+        }
+      }
+      [type="checkbox"]:checked:hover,
+      [type="checkbox"]:checked:focus,
+      [type="radio"]:checked:hover,
+      [type="radio"]:checked:focus {
+        border-color: transparent;
+        background-color: currentColor;
+      }
+      [type="checkbox"]:indeterminate {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 16'%3e%3cpath stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8h8'/%3e%3c/svg%3e");
+        border-color: transparent;
+        background-color: currentColor;
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      @media (forced-colors: active) {
+        [type="checkbox"]:indeterminate {
+          -webkit-appearance: auto;
+          appearance: auto;
+        }
+      }
+      [type="checkbox"]:indeterminate:hover,
+      [type="checkbox"]:indeterminate:focus {
+        border-color: transparent;
+        background-color: currentColor;
+      }
+      [type="file"] {
+        background: unset;
+        border-color: inherit;
+        border-width: 0;
+        border-radius: 0;
+        padding: 0;
+        font-size: unset;
+        line-height: inherit;
+      }
+      [type="file"]:focus {
+        outline: 1px solid ButtonText;
+        outline: 1px auto -webkit-focus-ring-color;
+      }
+      .visible {
+        visibility: visible;
+      }
+      .fixed {
+        position: fixed;
+      }
+      .absolute {
+        position: absolute;
+      }
+      .relative {
+        position: relative;
+      }
+      .-bottom-4 {
+        bottom: -1rem;
+      }
+      .-left-4 {
+        left: -1rem;
+      }
+      .-right-4 {
+        right: -1rem;
+      }
+      .-top-4 {
+        top: -1rem;
+      }
+      .left-0 {
+        left: 0px;
+      }
+      .top-0 {
+        top: 0px;
+      }
+      .top-1\.5 {
+        top: 0.375rem;
+      }
+      .z-10 {
+        z-index: 10;
+      }
+      .z-50 {
+        z-index: 50;
+      }
+      .mx-auto {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .mb-1 {
+        margin-bottom: 0.25rem;
+      }
+      .mb-12 {
+        margin-bottom: 3rem;
+      }
+      .mb-2 {
+        margin-bottom: 0.5rem;
+      }
+      .mb-4 {
+        margin-bottom: 1rem;
+      }
+      .mb-6 {
+        margin-bottom: 1.5rem;
+      }
+      .mb-8 {
+        margin-bottom: 2rem;
+      }
+      .ml-1 {
+        margin-left: 0.25rem;
+      }
+      .ml-4 {
+        margin-left: 1rem;
+      }
+      .mt-1 {
+        margin-top: 0.25rem;
+      }
+      .mt-2 {
+        margin-top: 0.5rem;
+      }
+      .mt-4 {
+        margin-top: 1rem;
+      }
+      .mt-8 {
+        margin-top: 2rem;
+      }
+      .mt-auto {
+        margin-top: auto;
+      }
+      .mt-section-gap {
+        margin-top: 120px;
+      }
+      .block {
+        display: block;
+      }
+      .inline-block {
+        display: inline-block;
+      }
+      .flex {
+        display: flex;
+      }
+      .inline-flex {
+        display: inline-flex;
+      }
+      .grid {
+        display: grid;
+      }
+      .hidden {
+        display: none;
+      }
+      .h-1 {
+        height: 0.25rem;
+      }
+      .h-12 {
+        height: 3rem;
+      }
+      .h-14 {
+        height: 3.5rem;
+      }
+      .h-16 {
+        height: 4rem;
+      }
+      .h-2 {
+        height: 0.5rem;
+      }
+      .h-3 {
+        height: 0.75rem;
+      }
+      .h-48 {
+        height: 12rem;
+      }
+      .h-6 {
+        height: 1.5rem;
+      }
+      .h-full {
+        height: 100%;
+      }
+      .min-h-\[884px\] {
+        min-height: 884px;
+      }
+      .w-12 {
+        width: 3rem;
+      }
+      .w-14 {
+        width: 3.5rem;
+      }
+      .w-16 {
+        width: 4rem;
+      }
+      .w-2 {
+        width: 0.5rem;
+      }
+      .w-24 {
+        width: 6rem;
+      }
+      .w-3 {
+        width: 0.75rem;
+      }
+      .w-48 {
+        width: 12rem;
+      }
+      .w-6 {
+        width: 1.5rem;
+      }
+      .w-full {
+        width: 100%;
+      }
+      .min-w-max {
+        min-width: max-content;
+      }
+      .max-w-2xl {
+        max-width: 42rem;
+      }
+      .max-w-3xl {
+        max-width: 48rem;
+      }
+      .max-w-container-max {
+        max-width: 1280px;
+      }
+      .max-w-xl {
+        max-width: 36rem;
+      }
+      .shrink-0 {
+        flex-shrink: 0;
+      }
+      .scale-105 {
+        --tw-scale-x: 1.05;
+        --tw-scale-y: 1.05;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+      }
+      @keyframes pulse {
+        50% {
+          opacity: 0.5;
+        }
+      }
+      .animate-pulse {
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+      .select-none {
+        -webkit-user-select: none;
+        user-select: none;
+      }
+      .resize-none {
+        resize: none;
+      }
+      .scroll-mt-16 {
+        scroll-margin-top: 4rem;
+      }
+      .scroll-mt-24 {
+        scroll-margin-top: 6rem;
+      }
+      .grid-cols-1 {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+      .grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .flex-col {
+        flex-direction: column;
+      }
+      .flex-wrap {
+        flex-wrap: wrap;
+      }
+      .items-start {
+        align-items: flex-start;
+      }
+      .items-center {
+        align-items: center;
+      }
+      .justify-center {
+        justify-content: center;
+      }
+      .justify-between {
+        justify-content: space-between;
+      }
+      .gap-1\.5 {
+        gap: 0.375rem;
+      }
+      .gap-10 {
+        gap: 2.5rem;
+      }
+      .gap-12 {
+        gap: 3rem;
+      }
+      .gap-16 {
+        gap: 4rem;
+      }
+      .gap-2 {
+        gap: 0.5rem;
+      }
+      .gap-3 {
+        gap: 0.75rem;
+      }
+      .gap-4 {
+        gap: 1rem;
+      }
+      .gap-6 {
+        gap: 1.5rem;
+      }
+      .gap-8 {
+        gap: 2rem;
+      }
+      .gap-section-gap {
+        gap: 120px;
+      }
+      .space-y-0 > :not([hidden]) ~ :not([hidden]) {
+        --tw-space-y-reverse: 0;
+        margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+        margin-bottom: calc(0px * var(--tw-space-y-reverse));
+      }
+      .space-y-12 > :not([hidden]) ~ :not([hidden]) {
+        --tw-space-y-reverse: 0;
+        margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
+        margin-bottom: calc(3rem * var(--tw-space-y-reverse));
+      }
+      .space-y-2 > :not([hidden]) ~ :not([hidden]) {
+        --tw-space-y-reverse: 0;
+        margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+        margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+      }
+      .space-y-3 > :not([hidden]) ~ :not([hidden]) {
+        --tw-space-y-reverse: 0;
+        margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+        margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+      }
+      .space-y-4 > :not([hidden]) ~ :not([hidden]) {
+        --tw-space-y-reverse: 0;
+        margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+        margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+      }
+      .space-y-6 > :not([hidden]) ~ :not([hidden]) {
+        --tw-space-y-reverse: 0;
+        margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+        margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+      }
+      .space-y-8 > :not([hidden]) ~ :not([hidden]) {
+        --tw-space-y-reverse: 0;
+        margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+        margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+      }
+      .overflow-hidden {
+        overflow: hidden;
+      }
+      .overflow-x-auto {
+        overflow-x: auto;
+      }
+      .rounded-2xl {
+        border-radius: 1rem;
+      }
+      .rounded-full {
+        border-radius: 9999px;
+      }
+      .rounded-lg {
+        border-radius: 0.5rem;
+      }
+      .rounded-xl {
+        border-radius: 0.75rem;
+      }
+      .border {
+        border-width: 1px;
+      }
+      .border-2 {
+        border-width: 2px;
+      }
+      .border-4 {
+        border-width: 4px;
+      }
+      .border-y {
+        border-top-width: 1px;
+        border-bottom-width: 1px;
+      }
+      .border-b {
+        border-bottom-width: 1px;
+      }
+      .border-l-4 {
+        border-left-width: 4px;
+      }
+      .border-t {
+        border-top-width: 1px;
+      }
+      .border-on-surface-variant\/20 {
+        border-color: rgb(198 198 205 / 0.2);
+      }
+      .border-outline-variant {
+        --tw-border-opacity: 1;
+        border-color: rgb(69 70 77 / var(--tw-border-opacity, 1));
+      }
+      .border-outline\/30 {
+        border-color: rgb(144 144 151 / 0.3);
+      }
+      .border-secondary {
+        --tw-border-opacity: 1;
+        border-color: rgb(76 215 246 / var(--tw-border-opacity, 1));
+      }
+      .border-secondary\/20 {
+        border-color: rgb(76 215 246 / 0.2);
+      }
+      .border-secondary\/30 {
+        border-color: rgb(76 215 246 / 0.3);
+      }
+      .border-surface {
+        --tw-border-opacity: 1;
+        border-color: rgb(5 20 36 / var(--tw-border-opacity, 1));
+      }
+      .border-tertiary\/20 {
+        border-color: rgb(208 188 255 / 0.2);
+      }
+      .border-tertiary\/30 {
+        border-color: rgb(208 188 255 / 0.3);
+      }
+      .border-white\/10 {
+        border-color: rgb(255 255 255 / 0.1);
+      }
+      .border-white\/5 {
+        border-color: rgb(255 255 255 / 0.05);
+      }
+      .bg-\[\#27C93F\] {
+        --tw-bg-opacity: 1;
+        background-color: rgb(39 201 63 / var(--tw-bg-opacity, 1));
+      }
+      .bg-\[\#27c93f\] {
+        --tw-bg-opacity: 1;
+        background-color: rgb(39 201 63 / var(--tw-bg-opacity, 1));
+      }
+      .bg-\[\#FF5F56\] {
+        --tw-bg-opacity: 1;
+        background-color: rgb(255 95 86 / var(--tw-bg-opacity, 1));
+      }
+      .bg-\[\#FFBD2E\] {
+        --tw-bg-opacity: 1;
+        background-color: rgb(255 189 46 / var(--tw-bg-opacity, 1));
+      }
+      .bg-\[\#ff5f56\] {
+        --tw-bg-opacity: 1;
+        background-color: rgb(255 95 86 / var(--tw-bg-opacity, 1));
+      }
+      .bg-\[\#ffbd2e\] {
+        --tw-bg-opacity: 1;
+        background-color: rgb(255 189 46 / var(--tw-bg-opacity, 1));
+      }
+      .bg-background {
+        --tw-bg-opacity: 1;
+        background-color: rgb(5 20 36 / var(--tw-bg-opacity, 1));
+      }
+      .bg-background\/80 {
+        background-color: rgb(5 20 36 / 0.8);
+      }
+      .bg-black\/40 {
+        background-color: rgb(0 0 0 / 0.4);
+      }
+      .bg-on-surface-variant\/10 {
+        background-color: rgb(198 198 205 / 0.1);
+      }
+      .bg-outline-variant {
+        --tw-bg-opacity: 1;
+        background-color: rgb(69 70 77 / var(--tw-bg-opacity, 1));
+      }
+      .bg-secondary {
+        --tw-bg-opacity: 1;
+        background-color: rgb(76 215 246 / var(--tw-bg-opacity, 1));
+      }
+      .bg-secondary\/10 {
+        background-color: rgb(76 215 246 / 0.1);
+      }
+      .bg-surface-container-highest {
+        --tw-bg-opacity: 1;
+        background-color: rgb(39 54 71 / var(--tw-bg-opacity, 1));
+      }
+      .bg-surface-container-low\/50 {
+        background-color: rgb(13 28 45 / 0.5);
+      }
+      .bg-surface-container-lowest {
+        --tw-bg-opacity: 1;
+        background-color: rgb(1 15 31 / var(--tw-bg-opacity, 1));
+      }
+      .bg-tertiary\/10 {
+        background-color: rgb(208 188 255 / 0.1);
+      }
+      .bg-gradient-to-br {
+        background-image: linear-gradient(
+          to bottom right,
+          var(--tw-gradient-stops)
+        );
+      }
+      .bg-gradient-to-r {
+        background-image: linear-gradient(to right, var(--tw-gradient-stops));
+      }
+      .from-secondary {
+        --tw-gradient-from: #4cd7f6 var(--tw-gradient-from-position);
+        --tw-gradient-to: rgb(76 215 246 / 0) var(--tw-gradient-to-position);
+        --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+      }
+      .from-white\/5 {
+        --tw-gradient-from: rgb(255 255 255 / 0.05)
+          var(--tw-gradient-from-position);
+        --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
+        --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+      }
+      .to-tertiary {
+        --tw-gradient-to: #d0bcff var(--tw-gradient-to-position);
+      }
+      .to-transparent {
+        --tw-gradient-to: transparent var(--tw-gradient-to-position);
+      }
+      .bg-clip-text {
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+      .object-cover {
+        object-fit: cover;
+      }
+      .p-0 {
+        padding: 0px;
+      }
+      .p-1\.5 {
+        padding: 0.375rem;
+      }
+      .p-3 {
+        padding: 0.75rem;
+      }
+      .p-4 {
+        padding: 1rem;
+      }
+      .p-6 {
+        padding: 1.5rem;
+      }
+      .p-8 {
+        padding: 2rem;
+      }
+      .px-10 {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+      }
+      .px-3 {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+      }
+      .px-4 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      .px-5 {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+      }
+      .px-6 {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+      .px-8 {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+      .px-gutter {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+      .py-1 {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+      }
+      .py-1\.5 {
+        padding-top: 0.375rem;
+        padding-bottom: 0.375rem;
+      }
+      .py-12 {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+      }
+      .py-2 {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+      }
+      .py-2\.5 {
+        padding-top: 0.625rem;
+        padding-bottom: 0.625rem;
+      }
+      .py-3 {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+      }
+      .py-4 {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+      .py-8 {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+      .py-section-gap {
+        padding-top: 120px;
+        padding-bottom: 120px;
+      }
+      .pb-1 {
+        padding-bottom: 0.25rem;
+      }
+      .pb-12 {
+        padding-bottom: 3rem;
+      }
+      .pl-10 {
+        padding-left: 2.5rem;
+      }
+      .pt-16 {
+        padding-top: 4rem;
+      }
+      .pt-4 {
+        padding-top: 1rem;
+      }
+      .pt-6 {
+        padding-top: 1.5rem;
+      }
+      .pt-8 {
+        padding-top: 2rem;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .font-body-lg {
+        font-family: Inter;
+      }
+      .font-body-md {
+        font-family: Inter;
+      }
+      .font-code-sm {
+        font-family: JetBrains Mono;
+      }
+      .font-headline-lg {
+        font-family: Geist;
+      }
+      .font-headline-lg-mobile {
+        font-family: Geist;
+      }
+      .font-headline-md {
+        font-family: Geist;
+      }
+      .font-label-caps {
+        font-family: JetBrains Mono;
+      }
+      .text-2xl {
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+      .text-3xl {
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+      }
+      .text-\[10px\] {
+        font-size: 10px;
+      }
+      .text-\[11px\] {
+        font-size: 11px;
+      }
+      .text-\[12px\] {
+        font-size: 12px;
+      }
+      .text-\[20px\] {
+        font-size: 20px;
+      }
+      .text-body-lg {
+        font-size: 18px;
+        line-height: 1.6;
+        font-weight: 400;
+      }
+      .text-body-md {
+        font-size: 16px;
+        line-height: 1.6;
+        font-weight: 400;
+      }
+      .text-code-sm {
+        font-size: 14px;
+        line-height: 1.5;
+        font-weight: 500;
+      }
+      .text-headline-lg {
+        font-size: 48px;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+        font-weight: 700;
+      }
+      .text-headline-lg-mobile {
+        font-size: 36px;
+        line-height: 1.2;
+        font-weight: 700;
+      }
+      .text-headline-md {
+        font-size: 32px;
+        line-height: 1.3;
+        font-weight: 600;
+      }
+      .text-label-caps {
+        font-size: 12px;
+        line-height: 1;
+        letter-spacing: 0.1em;
+        font-weight: 700;
+      }
+      .text-lg {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+      }
+      .text-sm {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+      }
+      .text-xs {
+        font-size: 0.75rem;
+        line-height: 1rem;
+      }
+      .font-bold {
+        font-weight: 700;
+      }
+      .font-medium {
+        font-weight: 500;
+      }
+      .font-semibold {
+        font-weight: 600;
+      }
+      .uppercase {
+        text-transform: uppercase;
+      }
+      .leading-relaxed {
+        line-height: 1.625;
+      }
+      .tracking-tight {
+        letter-spacing: -0.025em;
+      }
+      .tracking-tighter {
+        letter-spacing: -0.05em;
+      }
+      .tracking-widest {
+        letter-spacing: 0.1em;
+      }
+      .text-on-primary {
+        --tw-text-opacity: 1;
+        color: rgb(40 48 68 / var(--tw-text-opacity, 1));
+      }
+      .text-on-primary-fixed {
+        --tw-text-opacity: 1;
+        color: rgb(19 27 46 / var(--tw-text-opacity, 1));
+      }
+      .text-on-surface {
+        --tw-text-opacity: 1;
+        color: rgb(212 228 250 / var(--tw-text-opacity, 1));
+      }
+      .text-on-surface-variant {
+        --tw-text-opacity: 1;
+        color: rgb(198 198 205 / var(--tw-text-opacity, 1));
+      }
+      .text-on-surface-variant\/40 {
+        color: rgb(198 198 205 / 0.4);
+      }
+      .text-on-surface-variant\/60 {
+        color: rgb(198 198 205 / 0.6);
+      }
+      .text-on-surface-variant\/80 {
+        color: rgb(198 198 205 / 0.8);
+      }
+      .text-secondary {
+        --tw-text-opacity: 1;
+        color: rgb(76 215 246 / var(--tw-text-opacity, 1));
+      }
+      .text-tertiary {
+        --tw-text-opacity: 1;
+        color: rgb(208 188 255 / var(--tw-text-opacity, 1));
+      }
+      .text-transparent {
+        color: transparent;
+      }
+      .opacity-50 {
+        opacity: 0.5;
+      }
+      .opacity-60 {
+        opacity: 0.6;
+      }
+      .opacity-80 {
+        opacity: 0.8;
+      }
+      .shadow-2xl {
+        --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+        --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+        box-shadow:
+          var(--tw-ring-offset-shadow, 0 0 #0000),
+          var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+      }
+      .shadow-\[0_10px_40px_-10px_rgba\(76\2c 215\2c 246\2c 0\.3\)\] {
+        --tw-shadow: 0 10px 40px -10px rgba(76, 215, 246, 0.3);
+        --tw-shadow-colored: 0 10px 40px -10px var(--tw-shadow-color);
+        box-shadow:
+          var(--tw-ring-offset-shadow, 0 0 #0000),
+          var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+      }
+      .shadow-lg {
+        --tw-shadow:
+          0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        --tw-shadow-colored:
+          0 10px 15px -3px var(--tw-shadow-color),
+          0 4px 6px -4px var(--tw-shadow-color);
+        box-shadow:
+          var(--tw-ring-offset-shadow, 0 0 #0000),
+          var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+      }
+      .shadow-sm {
+        --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+        --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+        box-shadow:
+          var(--tw-ring-offset-shadow, 0 0 #0000),
+          var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+      }
+      .shadow-secondary\/20 {
+        --tw-shadow-color: rgb(76 215 246 / 0.2);
+        --tw-shadow: var(--tw-shadow-colored);
+      }
+      .outline-none {
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+      }
+      .grayscale {
+        --tw-grayscale: grayscale(100%);
+        filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+          var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert)
+          var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+      }
+      .invert {
+        --tw-invert: invert(100%);
+        filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+          var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert)
+          var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+      }
+      .filter {
+        filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+          var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert)
+          var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+      }
+      .backdrop-blur-md {
+        --tw-backdrop-blur: blur(12px);
+        -webkit-backdrop-filter: var(--tw-backdrop-blur)
+          var(--tw-backdrop-brightness) var(--tw-backdrop-contrast)
+          var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate)
+          var(--tw-backdrop-invert) var(--tw-backdrop-opacity)
+          var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+        backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness)
+          var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale)
+          var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert)
+          var(--tw-backdrop-opacity) var(--tw-backdrop-saturate)
+          var(--tw-backdrop-sepia);
+      }
+      .backdrop-blur-xl {
+        --tw-backdrop-blur: blur(24px);
+        -webkit-backdrop-filter: var(--tw-backdrop-blur)
+          var(--tw-backdrop-brightness) var(--tw-backdrop-contrast)
+          var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate)
+          var(--tw-backdrop-invert) var(--tw-backdrop-opacity)
+          var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+        backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness)
+          var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale)
+          var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert)
+          var(--tw-backdrop-opacity) var(--tw-backdrop-saturate)
+          var(--tw-backdrop-sepia);
+      }
+      .transition-all {
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 150ms;
+      }
+      .transition-colors {
+        transition-property:
+          color,
+          background-color,
+          border-color,
+          fill,
+          stroke,
+          -webkit-text-decoration-color;
+        transition-property:
+          color, background-color, border-color, text-decoration-color, fill,
+          stroke;
+        transition-property:
+          color,
+          background-color,
+          border-color,
+          text-decoration-color,
+          fill,
+          stroke,
+          -webkit-text-decoration-color;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 150ms;
+      }
+      .transition-transform {
+        transition-property: transform;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 150ms;
+      }
+      .duration-200 {
+        transition-duration: 200ms;
+      }
+      .duration-300 {
+        transition-duration: 300ms;
+      }
+      .duration-500 {
+        transition-duration: 500ms;
+      }
+      .duration-700 {
+        transition-duration: 700ms;
+      }
+      .before\:absolute::before {
+        content: var(--tw-content);
+        position: absolute;
+      }
+      .before\:bottom-2::before {
+        content: var(--tw-content);
+        bottom: 0.5rem;
+      }
+      .before\:left-\[11px\]::before {
+        content: var(--tw-content);
+        left: 11px;
+      }
+      .before\:top-2::before {
+        content: var(--tw-content);
+        top: 0.5rem;
+      }
+      .before\:w-\[2px\]::before {
+        content: var(--tw-content);
+        width: 2px;
+      }
+      .before\:bg-outline-variant::before {
+        content: var(--tw-content);
+        --tw-bg-opacity: 1;
+        background-color: rgb(69 70 77 / var(--tw-bg-opacity, 1));
+      }
+      .hover\:scale-105:hover {
+        --tw-scale-x: 1.05;
+        --tw-scale-y: 1.05;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+      }
+      .hover\:scale-110:hover {
+        --tw-scale-x: 1.1;
+        --tw-scale-y: 1.1;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+      }
+      .hover\:scale-\[1\.02\]:hover {
+        --tw-scale-x: 1.02;
+        --tw-scale-y: 1.02;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+      }
+      .hover\:border-secondary:hover {
+        --tw-border-opacity: 1;
+        border-color: rgb(76 215 246 / var(--tw-border-opacity, 1));
+      }
+      .hover\:bg-secondary\/10:hover {
+        background-color: rgb(76 215 246 / 0.1);
+      }
+      .hover\:bg-tertiary\/10:hover {
+        background-color: rgb(208 188 255 / 0.1);
+      }
+      .hover\:bg-white\/5:hover {
+        background-color: rgb(255 255 255 / 0.05);
+      }
+      .hover\:text-on-surface:hover {
+        --tw-text-opacity: 1;
+        color: rgb(212 228 250 / var(--tw-text-opacity, 1));
+      }
+      .hover\:text-secondary:hover {
+        --tw-text-opacity: 1;
+        color: rgb(76 215 246 / var(--tw-text-opacity, 1));
+      }
+      .hover\:opacity-90:hover {
+        opacity: 0.9;
+      }
+      .focus\:border-secondary:focus {
+        --tw-border-opacity: 1;
+        border-color: rgb(76 215 246 / var(--tw-border-opacity, 1));
+      }
+      .focus\:ring-1:focus {
+        --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
+          var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+        --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
+          calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+        box-shadow:
+          var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
+          var(--tw-shadow, 0 0 #0000);
+      }
+      .focus\:ring-secondary:focus {
+        --tw-ring-opacity: 1;
+        --tw-ring-color: rgb(76 215 246 / var(--tw-ring-opacity, 1));
+      }
+      .active\:scale-95:active {
+        --tw-scale-x: 0.95;
+        --tw-scale-y: 0.95;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+      }
+      .active\:scale-\[0\.98\]:active {
+        --tw-scale-x: 0.98;
+        --tw-scale-y: 0.98;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+      }
+      .group:hover .group-hover\:scale-110 {
+        --tw-scale-x: 1.1;
+        --tw-scale-y: 1.1;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+      }
+      .group:hover .group-hover\:border-secondary {
+        --tw-border-opacity: 1;
+        border-color: rgb(76 215 246 / var(--tw-border-opacity, 1));
+      }
+      .group:hover .group-hover\:bg-secondary\/10 {
+        background-color: rgb(76 215 246 / 0.1);
+      }
+      .group:hover .group-hover\:text-secondary {
+        --tw-text-opacity: 1;
+        color: rgb(76 215 246 / var(--tw-text-opacity, 1));
+      }
+      .group:hover .group-hover\:opacity-100 {
+        opacity: 1;
+      }
+      .group:hover .group-hover\:grayscale-0 {
+        --tw-grayscale: grayscale(0);
+        filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+          var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert)
+          var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+      }
+      @media (min-width: 768px) {
+        .md\:col-span-2 {
+          grid-column: span 2 / span 2;
+        }
+        .md\:flex {
+          display: flex;
+        }
+        .md\:h-64 {
+          height: 16rem;
+        }
+        .md\:w-1\/2 {
+          width: 50%;
+        }
+        .md\:w-64 {
+          width: 16rem;
+        }
+        .md\:w-auto {
+          width: auto;
+        }
+        .md\:grid-cols-2 {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .md\:grid-cols-4 {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+        .md\:flex-row {
+          flex-direction: row;
+        }
+        .md\:items-start {
+          align-items: flex-start;
+        }
+        .md\:items-end {
+          align-items: flex-end;
+        }
+        .md\:p-12 {
+          padding: 3rem;
+        }
+        .md\:text-left {
+          text-align: left;
+        }
+        .md\:font-headline-lg {
+          font-family: Geist;
+        }
+        .md\:font-headline-xl {
+          font-family: Geist;
+        }
+        .md\:text-headline-lg {
+          font-size: 48px;
+          line-height: 1.2;
+          letter-spacing: -0.02em;
+          font-weight: 700;
+        }
+        .md\:text-headline-xl {
+          font-size: 60px;
+          line-height: 1.1;
+          letter-spacing: -0.02em;
+          font-weight: 800;
+        }
+      }
+      @media (min-width: 1024px) {
+        .lg\:col-span-4 {
+          grid-column: span 4 / span 4;
+        }
+        .lg\:col-span-8 {
+          grid-column: span 8 / span 8;
+        }
+        .lg\:w-5\/12 {
+          width: 41.666667%;
+        }
+        .lg\:w-7\/12 {
+          width: 58.333333%;
+        }
+        .lg\:grid-cols-12 {
+          grid-template-columns: repeat(12, minmax(0, 1fr));
+        }
+        .lg\:grid-cols-2 {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .lg\:flex-row {
+          flex-direction: row;
+        }
+      }
+    </style>
+  </head>
+  <body class="grid-pattern" data-mode="connect">
+    <!-- Fixed Navigation -->
+    <header
+      class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-white/10 shadow-sm"
+    >
+      <nav
+        class="flex justify-between items-center px-gutter max-w-container-max mx-auto h-16"
+      >
+        <a
+          class="font-headline-md text-2xl font-bold text-on-surface tracking-tight"
+          href="#home"
+          >Kuldip Portfolio</a
+        >
+        <div
+          class="hidden md:flex gap-8 items-center font-body-md text-body-md"
+          id="nav-links"
+        >
+          <a
+            class="nav-link text-on-surface-variant hover:text-secondary transition-colors duration-200 pb-1 active"
+            href="#home"
+            >Home</a
+          >
+          <a
+            class="nav-link text-on-surface-variant hover:text-secondary transition-colors duration-200 pb-1"
+            href="#about"
+            >About</a
+          >
+          <a
+            class="nav-link text-on-surface-variant hover:text-secondary transition-colors duration-200 pb-1"
+            href="#skills"
+            >Skills</a
+          >
+          <a
+            class="nav-link text-on-surface-variant hover:text-secondary transition-colors duration-200 pb-1"
+            href="#projects"
+            >Projects</a
+          >
+          <a
+            class="nav-link text-on-surface-variant hover:text-secondary transition-colors duration-200 pb-1"
+            href="#experience"
+            >Experience</a
+          >
+          <a
+            class="nav-link text-on-surface-variant hover:text-secondary transition-colors duration-200 pb-1"
+            href="#contact"
+            >Contact</a
+          >
+        </div>
+        <div class="flex items-center gap-4">
+          <a
+            class="primary-gradient text-on-primary-fixed text-xs font-bold px-5 py-2.5 rounded-lg hover:scale-105 transition-transform btn-shine"
+            href="#contact"
+            >HIRE ME</a
+          >
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- Hero Section -->
+      <section
+        class="hero-bg min-h-[884px] flex flex-col items-center justify-center pt-16"
+        data-stitch-vh="min-h-[884px]===min-h-screen"
+        id="home"
+      >
+        <div
+          class="max-w-container-max w-full px-gutter mx-auto text-center py-section-gap"
+        >
+          <div class="entrance-reveal relative inline-block mb-12 visible">
+            <div class="relative z-10 p-1.5 rounded-full primary-gradient">
+              <div
+                class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-surface shadow-2xl"
+              >
+                <img
+                  alt="VASAVA KULDIP - MERN Developer"
+                  class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  src="IMG_5500.PNG"
+                />
+              </div>
+            </div>
+            <!-- Decorative Floating Elements -->
+            <div class="absolute -top-4 -right-4 floating stagger-2">
+              <div
+                class="glass-card px-4 py-2 rounded-xl border-secondary/30 flex items-center gap-2"
+              >
+                <span
+                  class="material-symbols-outlined text-secondary text-sm"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >terminal</span
+                >
+                <span class="font-code-sm text-[10px] text-on-surface"
+                  >MERN Expert</span
+                >
+              </div>
+            </div>
+            <div
+              class="absolute -bottom-4 -left-4 floating stagger-3"
+              style="animation-delay: -2s"
+            >
+              <div
+                class="glass-card px-4 py-2 rounded-xl border-tertiary/30 flex items-center gap-2"
+              >
+                <span
+                  class="material-symbols-outlined text-tertiary text-sm"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >verified</span
+                >
+                <span class="font-code-sm text-[10px] text-on-surface"
+                  >MCA Grad</span
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="space-y-6 max-w-3xl mx-auto entrance-reveal stagger-1 visible"
+          >
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20"
+            >
+              <span
+                class="w-2 h-2 rounded-full bg-secondary animate-pulse"
+              ></span>
+              <span class="font-label-caps text-label-caps text-secondary"
+                >AVAILABLE FOR PROJECTS</span
+              >
+            </div>
+            <h1>
+              <span
+                class="font-headline-lg-mobile md:font-headline-xl text-headline-lg-mobile md:text-headline-xl block text-on-surface"
+                >VASAVA KULDIP</span
+              >
+              <span
+                class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg primary-gradient bg-clip-text text-transparent"
+                >Full Stack Developer</span
+              >
+            </h1>
+            <p
+              class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto"
+            >
+              Building scalable and high-performance web ecosystems. Passionate
+              about creating seamless user experiences through React.js and
+              robust Node.js architectures.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 pt-6">
+              <a
+                class="primary-gradient text-on-primary font-body-md text-body-md px-10 py-4 rounded-xl font-bold flex items-center gap-2 hover:opacity-90 transition-all scale-105 active:scale-95 shadow-[0_10px_40px_-10px_rgba(76,215,246,0.3)] btn-shine"
+                href="#contact"
+              >
+                Let's Talk <span class="material-symbols-outlined">send</span>
+              </a>
+              <a
+                class="border-2 border-outline/30 hover:border-secondary text-on-surface font-body-md text-body-md px-10 py-4 rounded-xl font-bold flex items-center gap-2 backdrop-blur-md transition-all active:scale-95"
+                href="resume.pdf"
+                target="_blank"
+              >
+                View Resume
+                <span class="material-symbols-outlined">download</span>
+              </a>
+            </div>
+          </div>
+          <!-- Quick Stats -->
+          <div
+            class="grid grid-cols-3 gap-4 max-w-xl mx-auto pt-16 entrance-reveal stagger-2 visible"
+          >
+            <div class="glass-card p-6 rounded-2xl">
+              <div class="font-headline-md text-headline-md text-secondary">
+                3+
+              </div>
+              <div
+                class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest"
+              >
+                Projects
+              </div>
+            </div>
+            <div class="glass-card p-6 rounded-2xl">
+              <div class="font-headline-md text-headline-md text-tertiary">
+                MCA
+              </div>
+              <div
+                class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest"
+              >
+                Degree
+              </div>
+            </div>
+            <div class="glass-card p-6 rounded-2xl">
+              <div class="font-headline-md text-headline-md text-secondary">
+                100%
+              </div>
+              <div
+                class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest"
+              >
+                Dedication
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Tech Ribbon -->
+        <div
+          class="w-full bg-surface-container-low/50 py-8 border-y border-white/5 mt-auto"
+        >
+          <div class="max-w-container-max mx-auto px-gutter overflow-x-auto">
+            <div class="flex items-center justify-between gap-8 min-w-max">
+              <span
+                class="font-code-sm text-code-sm text-on-surface-variant/40 select-none tracking-widest"
+                >CORE STACK //</span
+              >
+              <div class="flex gap-10 items-center">
+                <div
+                  class="flex items-center gap-3 px-5 py-2.5 rounded-lg border border-white/5 bg-white/2 hover:bg-white/5 transition-colors group"
+                >
+                  <img
+                    alt="MongoDB"
+                    class="w-6 h-6 grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCe3p3kCycKLzJCXcI_NSAeGB0bkF_1Aw7gHSnIwYLc8IZACyNWBX72jmRQfP2yJORSz0KDi9J-yVsUlByZ2AVjqCspCj0q5gRKy8tiW8so2K8vZvI6q-LSvBxl-VrVvaWR_NAP9Bp5-a8Zsizz7GUSaHFGdN2wZXFXz0_0dLcWIyqj3Yofn1ICqiZtSoXKJP1bMyrLIaJz54h7BJnIpEq0lgGONnm78ZWvStUkDW-gp9Ca5GnJgl0HLPBMLKpKsyy_ofkh03YpinUH"
+                  />
+                  <span
+                    class="font-code-sm text-code-sm text-on-surface-variant"
+                    >MongoDB</span
+                  >
+                </div>
+                <div
+                  class="flex items-center gap-3 px-5 py-2.5 rounded-lg border border-white/5 bg-white/2 hover:bg-white/5 transition-colors group"
+                >
+                  <img
+                    alt="Express"
+                    class="w-6 h-6 grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all filter invert"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOlWcJeh4gmTLuWXFc4fvlrVF58pvB7Wcwe6QCR_aRCLoNWxMqGRkE5ntl9YjKf8r88Y2lQGzQ6vJz1dG9hFJyJQ3asxrJ7pYuuXf8YTNUWDsfafWxeI1_6IFG3osDmYtxnARBHCkD5I2oJ_Zcx-f7jmHuhcJcVQ9VTUPEB-EgExKT5K_9NzP5c4aVNtIvrZK0uZq6sJr3akbZNP4GqYNrvsY6qBix9gxvSbWkaNv9LAC6fMFNLAmco_Oh2OOaIRUj8TzEvIFnvna8"
+                  />
+                  <span
+                    class="font-code-sm text-code-sm text-on-surface-variant"
+                    >Express.js</span
+                  >
+                </div>
+                <div
+                  class="flex items-center gap-3 px-5 py-2.5 rounded-lg border border-white/5 bg-white/2 hover:bg-white/5 transition-colors group"
+                >
+                  <img
+                    alt="React"
+                    class="w-6 h-6 grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyDJwzVXs7srEBjU1Jp885AWi9kYYLoXyY5BAFG6j0Vtla4-Cftu6oZavZGJ8HrxhDO7fUrxnBClmFGtSy1vYk_1OfX_p4UFCDrJlgQaaDsOdoIn0APTpUJg0xZTQlqKggm4HD4lDoGXf1ypg7Yy9Bxjqxcj-jyTzWtnis32keOoky-IBPqlcX3-DGmCWcRP12QP1g6H3YI8WVqJ45QOMS51xsDbvg60pu_KUVdOPdEJna6Vi35z3ts4Oe-ohgqIIvHis-A3oDjjDV"
+                  />
+                  <span
+                    class="font-code-sm text-code-sm text-on-surface-variant"
+                    >React.js</span
+                  >
+                </div>
+                <div
+                  class="flex items-center gap-3 px-5 py-2.5 rounded-lg border border-white/5 bg-white/2 hover:bg-white/5 transition-colors group"
+                >
+                  <img
+                    alt="Node"
+                    class="w-6 h-6 grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiD6e6oH7LdCIKA1CRbJDV6g2EXvEJfRNrH-Td9X8G5XZy1OpC_TyuRVtcNcqoIoRkqJijh5tP5dyp7ivvaKdzIrncsXjIAdsgOxPCZs5Vf1UBvxUlP9h0vZ8G-t9FCunBGOcFL5yVegg0VWkLLmHscK8Oz-LynYhrL32Ktq3A-10_ImiQ5R0gFOoUAcDVi1zP2aV0Zt80BUhTg0ogv8v7RzhBu_sXVeHUN72rwnGTOavtEGT_yQLyhuyJayXRWvrb6PhmgWrA3IUl"
+                  />
+                  <span
+                    class="font-code-sm text-code-sm text-on-surface-variant"
+                    >Node.js</span
+                  >
+                </div>
+              </div>
+              <span
+                class="font-code-sm text-code-sm text-on-surface-variant/40 select-none tracking-widest"
+                >// SINCE 2024</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- About Section -->
+      <section
+        class="max-w-container-max mx-auto px-gutter py-section-gap scroll-mt-16"
+        id="about"
+      >
+        <div class="grid lg:grid-cols-12 gap-16 items-start">
+          <div class="lg:col-span-8 space-y-8 entrance-reveal visible">
+            <div
+              class="inline-flex items-center gap-3 px-4 py-2 rounded-full glass-card"
+            >
+              <span
+                class="w-2 h-2 rounded-full bg-secondary animate-pulse"
+              ></span>
+              <span class="font-label-caps text-label-caps text-secondary"
+                >AVAILABLE FOR HIRE</span
+              >
+            </div>
+            <h2 class="font-headline-lg text-headline-lg text-on-surface">
+              Building Modern
+              <span class="text-secondary">Web Applications</span> with
+              <span class="text-tertiary">MERN Stack</span>.
+            </h2>
+            <div
+              class="space-y-4 font-body-lg text-body-lg text-on-surface-variant leading-relaxed max-w-3xl"
+            >
+              <p>
+                I am an
+                <span class="text-on-surface font-semibold">MCA graduate</span>
+                with knowledge of React.js, Node.js, Express.js, and MongoDB.
+                passionate about MERN stack web development and experienced in
+                building web applications with a focus on functionality, user
+                experience, and continuous learning.
+              </p>
+              <p>
+                As an aspiring
+                <span class="text-secondary font-medium"
+                  >Full Stack Developer</span
+                >
+                I enjoy creating responsive and
+                <span class="text-secondary font-medium"
+                  >User-friendly web applications</span
+                >
+                while continuously improving my skills in the MERN stack
+                ecosystem.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-4 pt-4">
+              <a
+                href="resume.pdf"
+                download
+                class="px-8 py-4 rounded-lg bg-gradient-to-r from-secondary to-tertiary text-on-primary font-bold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-secondary/20 btn-shine inline-block"
+              >
+                Download Resume
+              </a>
+              <a
+                href="https://github.com/KULDIP0302"
+                target="_blank"
+                class="px-8 py-4 rounded-lg glass-card text-on-surface font-bold hover:bg-white/5 transition-all inline-block"
+              >
+                View GitHub
+              </a>
+            </div>
+          </div>
+          <div
+            class="lg:col-span-4 space-y-6 entrance-reveal stagger-1 visible"
+          >
+            <div class="glass-card p-6 rounded-2xl">
+              <div class="flex justify-between items-start mb-4">
+                <div>
+                  <p
+                    class="font-label-caps text-label-caps text-on-surface-variant"
+                  >
+                    CURRENT FOCUS
+                  </p>
+                  <p class="font-headline-md text-2xl font-bold text-secondary">
+                    Full Stack Development
+                  </p>
+                </div>
+                <span class="material-symbols-outlined text-tertiary text-3xl"
+                  >terminal</span
+                >
+              </div>
+              <div class="space-y-3 pt-4 border-t border-white/10">
+                <div class="flex justify-between items-center text-sm">
+                  <span class="text-on-surface-variant">Education </span>
+                  <span class="text-on-surface font-medium"> MCA Graduate</span>
+                </div>
+                <div class="flex justify-between items-center text-sm">
+                  <span class="text-on-surface-variant"></span>
+                  <span class="text-on-surface font-medium">BCA Graduate</span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="glass-card p-6 rounded-2xl bg-gradient-to-br from-white/5 to-transparent"
+            >
+              <div class="flex items-center gap-4 mb-2">
+                <span class="material-symbols-outlined text-secondary"
+                  >verified_user</span
+                >
+                <span class="font-label-caps text-label-caps text-on-surface"
+                  >Commitment</span
+                >
+              </div>
+              <p class="text-sm text-on-surface-variant leading-relaxed">
+                Dedicated to building clean, responsive, and user-friendly web
+                applications while continuously learning modern web
+                technologies.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Skills Section -->
+      <section
+        class="max-w-container-max mx-auto px-gutter py-section-gap scroll-mt-16"
+        id="skills"
+      >
+        <div class="space-y-12">
+          <div
+            class="flex flex-col md:flex-row md:items-end justify-between gap-6 entrance-reveal visible"
+          >
+            <div class="space-y-4">
+              <h2 class="font-headline-lg text-headline-lg text-on-surface">
+                Technical <span class="text-secondary">Arsenal</span>
+              </h2>
+              <p
+                class="font-body-md text-body-md text-on-surface-variant max-w-xl"
+              >
+                A curated selection of technologies I leverage to build modern,
+                high-performance web applications from the database to the
+                browser.
+              </p>
+            </div>
+            <div class="flex gap-2">
+              <span
+                class="px-4 py-1.5 glass-card rounded-full font-code-sm text-code-sm text-secondary"
+                >MERN</span
+              >
+              <span
+                class="px-4 py-1.5 glass-card rounded-full font-code-sm text-code-sm text-tertiary"
+                >Agile</span
+              >
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <!-- Frontend Card -->
+            <div
+              class="md:col-span-2 glass-card p-8 rounded-2xl space-y-6 entrance-reveal visible"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center border border-secondary/20"
+                >
+                  <span class="material-symbols-outlined text-secondary"
+                    >dashboard</span
+                  >
+                </div>
+                <h3 class="font-headline-md text-headline-md">Frontend</h3>
+              </div>
+              <div class="flex flex-wrap gap-3">
+                <div
+                  class="group flex items-center gap-2 px-4 py-2 glass-card rounded-xl hover:bg-secondary/10 transition-colors"
+                >
+                  <span
+                    class="material-symbols-outlined text-secondary text-lg"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >layers</span
+                  >
+                  <span class="font-code-sm text-code-sm">React.js</span>
+                </div>
+                <div
+                  class="group flex items-center gap-2 px-4 py-2 glass-card rounded-xl hover:bg-secondary/10 transition-colors"
+                >
+                  <span class="material-symbols-outlined text-secondary text-lg"
+                    >palette</span
+                  >
+                  <span class="font-code-sm text-code-sm">Tailwind CSS</span>
+                </div>
+                <div
+                  class="group flex items-center gap-2 px-4 py-2 glass-card rounded-xl hover:bg-secondary/10 transition-colors"
+                >
+                  <span class="material-symbols-outlined text-secondary text-lg"
+                    >javascript</span
+                  >
+                  <span class="font-code-sm text-code-sm">JavaScript</span>
+                </div>
+              </div>
+            </div>
+            <!-- Backend Card -->
+            <div
+              class="md:col-span-2 glass-card p-8 rounded-2xl space-y-6 entrance-reveal stagger-1 visible"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 rounded-lg bg-tertiary/10 flex items-center justify-center border border-tertiary/20"
+                >
+                  <span class="material-symbols-outlined text-tertiary"
+                    >dns</span
+                  >
+                </div>
+                <h3 class="font-headline-md text-headline-md">Backend</h3>
+              </div>
+              <div class="flex flex-wrap gap-3">
+                <div
+                  class="group flex items-center gap-2 px-4 py-2 glass-card rounded-xl hover:bg-tertiary/10 transition-colors"
+                >
+                  <span class="material-symbols-outlined text-tertiary text-lg"
+                    >code</span
+                  >
+                  <span class="font-code-sm text-code-sm">Node.js</span>
+                </div>
+                <div
+                  class="group flex items-center gap-2 px-4 py-2 glass-card rounded-xl hover:bg-tertiary/10 transition-colors"
+                >
+                  <span class="material-symbols-outlined text-tertiary text-lg"
+                    >api</span
+                  >
+                  <span class="font-code-sm text-code-sm">Express.js</span>
+                </div>
+              </div>
+            </div>
+            <!-- Database Card -->
+            <div
+              class="md:col-span-2 glass-card p-8 rounded-2xl relative overflow-hidden entrance-reveal stagger-2 visible"
+            >
+              <div
+                class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-secondary to-tertiary"
+              ></div>
+              <div class="flex items-center justify-between mb-6">
+                <div class="flex gap-1.5">
+                  <div class="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
+                  <div class="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
+                  <div class="w-3 h-3 rounded-full bg-[#27c93f]"></div>
+                </div>
+                <span class="font-code-sm text-code-sm text-on-surface-variant"
+                  >mongodb.sh</span
+                >
+              </div>
+              <h3
+                class="font-headline-md text-headline-md flex items-center gap-3 mb-4"
+              >
+                <span class="material-symbols-outlined text-secondary"
+                  >database</span
+                >
+                Database
+              </h3>
+              <div
+                class="bg-black/40 rounded-lg p-4 border border-white/5 font-code-sm text-code-sm text-secondary"
+              >
+                <p class="text-tertiary">$ mongosh --host cluster0</p>
+                <p class="text-on-surface-variant mt-1">
+                  Connected: ["MongoDB", "NoSQL", "Mongoose"]
+                </p>
+              </div>
+            </div>
+            <!-- Tools Card -->
+            <div
+              class="md:col-span-2 glass-card p-8 rounded-2xl space-y-6 entrance-reveal stagger-2 visible"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 rounded-lg bg-on-surface-variant/10 flex items-center justify-center border border-on-surface-variant/20"
+                >
+                  <span
+                    class="material-symbols-outlined text-on-surface-variant"
+                    >build</span
+                  >
+                </div>
+                <h3 class="font-headline-md text-headline-md">Tools</h3>
+              </div>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="flex items-center gap-3 p-3 glass-card rounded-lg">
+                  <span
+                    class="material-symbols-outlined text-on-surface-variant"
+                    >merge</span
+                  >
+                  <span class="font-body-md">Git</span>
+                </div>
+                <div class="flex items-center gap-3 p-3 glass-card rounded-lg">
+                  <span
+                    class="material-symbols-outlined text-on-surface-variant"
+                    >terminal</span
+                  >
+                  <span class="font-body-md">VS Code</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Projects Section -->
+      <section
+        class="max-w-container-max mx-auto px-gutter py-section-gap scroll-mt-16"
+        id="projects"
+      >
+        <div class="space-y-12">
+          <header class="entrance-reveal visible">
+            <span
+              class="font-label-caps text-label-caps text-secondary mb-4 block"
+              >PORTFOLIO SHOWCASE</span
+            >
+            <h2 class="font-headline-lg text-headline-lg mb-2">
+              Featured Projects
+            </h2>
+            <div class="h-1 w-24 primary-gradient rounded-full"></div>
+          </header>
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(4, 1fr);
+              gap: 1.5rem;
+            "
+          >
+            <!-- Project Card 1 -->
+            <div
+              class="glass-card rounded-xl overflow-hidden flex flex-col group entrance-reveal visible"
+            >
+              <div class="relative overflow-hidden" style="height: 160px">
+                <img
+                  alt="Fine Art Platform"
+                  class="h-full w-full object-cover group-hover:scale-110 transition-all duration-700"
+                  src="IMG_1164.JPG.jpeg"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+                ></div>
+                <div class="absolute top-3 left-3 flex gap-2">
+                  <span
+                    class="font-code-sm text-code-sm px-3 py-1 rounded-full bg-secondary/20 text-secondary border border-secondary/30 backdrop-blur-sm"
+                    >MERN</span
+                  >
+                  <span
+                    class="font-code-sm text-code-sm px-3 py-1 rounded-full bg-tertiary/20 text-tertiary border border-tertiary/30 backdrop-blur-sm"
+                    >E-Commerce</span
+                  >
+                </div>
+              </div>
+              <div class="p-4 flex flex-col flex-1">
+                <h3 class="text-lg font-semibold mb-2 text-on-surface">
+                  Fine Art E-Commerce Platform
+                </h3>
+                <p
+                  class="text-sm text-on-surface-variant mb-4 flex-1"
+                  style="font-size: 13px; line-height: 1.5"
+                >
+                  A full-stack platform for browsing and acquiring high-end
+                  artwork, featuring dynamic inventory and secure payments.
+                </p>
+                <span> </span>
+                <div class="flex gap-3 mt-auto">
+                  <a
+                    class="primary-gradient px-5 py-2 rounded-lg font-body-md font-bold text-on-primary-fixed flex items-center gap-2 hover:opacity-90 transition-all btn-shine text-sm"
+                    href="https://fine-art-platform.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Live Demo
+                    <span class="material-symbols-outlined text-sm"
+                      >open_in_new</span
+                    >
+                  </a>
+                  <a
+                    class="border border-outline-variant px-5 py-2 rounded-lg font-body-md text-on-surface hover:bg-white/5 transition-all flex items-center gap-2 text-sm"
+                    href="https://github.com/KULDIP0302/fine-art-platform"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub
+                    <span class="material-symbols-outlined text-sm">code</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div
+              class="glass-card rounded-xl overflow-hidden flex flex-col group entrance-reveal stagger-1"
+            >
+              <div class="relative overflow-hidden" style="height: 160px">
+                <img
+                  alt="Project Two"
+                  class="h-full w-full object-cover group-hover:scale-110 transition-all duration-700"
+                  src="OIP.webp"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+                ></div>
+                <div class="absolute top-3 left-3 flex gap-2">
+                  <span
+                    class="font-code-sm text-code-sm px-3 py-1 rounded-full bg-secondary/20 text-secondary border border-secondary/30 backdrop-blur-sm"
+                    >React</span
+                  >
+                  <span
+                    class="font-code-sm text-code-sm px-3 py-1 rounded-full bg-tertiary/20 text-tertiary border border-tertiary/30 backdrop-blur-sm"
+                    >Node.js</span
+                  >
+                </div>
+              </div>
+              <div class="p-4 flex flex-col flex-1">
+                <h3 class="text-lg font-semibold mb-2 text-on-surface">
+                  Trip Planning with AI (Currently Under Development)
+                </h3>
+                <p
+                  class="text-sm text-on-surface-variant mb-4 flex-1"
+                  style="font-size: 13px; line-height: 1.5"
+                >
+                  AI-powered travel booking platform with package search,
+                  wishlist, and booking management. Currently under development.
+                </p>
+                <div class="flex gap-3 mt-auto">
+                  <a
+                    class="primary-gradient px-5 py-2 rounded-lg font-body-md font-bold text-on-primary-fixed flex items-center gap-2 hover:opacity-90 transition-all btn-shine text-sm"
+                    href="https://github.com/KULDIP0302/Trip-planing-with-AI"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    github
+                    <span class="material-symbols-outlined text-sm"
+                      >open_in_new</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div
+              class="glass-card rounded-xl overflow-hidden flex flex-col group entrance-reveal stagger-2"
+            >
+              <div class="relative overflow-hidden" style="height: 160px">
+                <img
+                  alt="Project Three"
+                  class="h-full w-full object-cover group-hover:scale-110 transition-all duration-700"
+                  src="IMG_1164.JPG.jpeg"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+                ></div>
+                <div class="absolute top-3 left-3 flex gap-2">
+                  <span
+                    class="font-code-sm text-code-sm px-3 py-1 rounded-full bg-secondary/20 text-secondary border border-secondary/30 backdrop-blur-sm"
+                    >MongoDB</span
+                  >
+                  <span
+                    class="font-code-sm text-code-sm px-3 py-1 rounded-full bg-tertiary/20 text-tertiary border border-tertiary/30 backdrop-blur-sm"
+                    >Express</span
+                  >
+                </div>
+              </div>
+              <div class="p-4 flex flex-col flex-1">
+                <h3 class="text-lg font-semibold mb-2 text-on-surface">
+                  Attendance management system
+                </h3>
+                <p
+                  class="text-sm text-on-surface-variant mb-4 flex-1"
+                  style="font-size: 13px; line-height: 1.5"
+                >
+                  It aims to streamline school management, class organization,
+                  and facilitate communication between students, teachers, and
+                  administrators. Features
+                </p>
+                <div class="flex gap-3 mt-auto">
+                  <a
+                    class="primary-gradient px-5 py-2 rounded-lg font-body-md font-bold text-on-primary-fixed flex items-center gap-2 hover:opacity-90 transition-all btn-shine text-sm"
+                    href="https://github.com/KULDIP0302/attendence_manegment_system"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    github
+                    <span class="material-symbols-outlined text-sm"
+                      >open_in_new</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Experience & Education -->
+      <section
+        class="max-w-container-max mx-auto px-gutter py-section-gap scroll-mt-16"
+      >
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-section-gap">
+          <!-- Experience -->
+          <div class="scroll-mt-24 entrance-reveal" id="experience">
+            <div class="mb-12">
+              <h2 class="font-headline-lg text-headline-lg mb-2">collages</h2>
+              <div class="h-1 w-24 primary-gradient rounded-full"></div>
+            </div>
+            <div
+              class="space-y-0 relative before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-[2px] before:bg-outline-variant"
+            >
+              <div class="relative pl-10 pb-12">
+                <div
+                  class="absolute left-0 top-1.5 w-6 h-6 rounded-full bg-background border-2 border-secondary flex items-center justify-center"
+                >
+                  <div class="w-2 h-2 rounded-full bg-secondary"></div>
+                </div>
+                <span
+                  class="font-label-caps text-label-caps text-secondary mb-1 block"
+                  >2021-2024</span
+                >
+                <h3 class="font-headline-md text-2xl mb-1 text-on-surface">
+                  BCA
+                </h3>
+                <p class="font-body-md text-on-surface-variant mb-4">
+                  The mandvi education society institute of computer
+                  applications
+                </p>
+              </div>
+              <div class="relative pl-10">
+                <div
+                  class="absolute left-0 top-1.5 w-6 h-6 rounded-full bg-background border-2 border-outline-variant flex items-center justify-center"
+                >
+                  <div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+                </div>
+                <span
+                  class="font-label-caps text-label-caps text-on-surface-variant/60 mb-1 block"
+                  >2024-2026 completed</span
+                >
+                <h3 class="font-headline-md text-2xl mb-1 text-on-surface">
+                  MCA
+                </h3>
+                <p class="font-body-md text-on-surface-variant mb-4">
+                  The mandvi education society institute of computer studies
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Education -->
+          <div class="scroll-mt-24 entrance-reveal stagger-1" id="education">
+            <div class="mb-12">
+              <h2 class="font-headline-lg text-headline-lg mb-2">Education</h2>
+              <div class="h-1 w-24 primary-gradient rounded-full"></div>
+            </div>
+            <div
+              class="glass-card p-8 rounded-xl relative overflow-hidden group"
+            >
+              <div class="flex gap-6 items-start">
+                <div
+                  class="w-16 h-16 rounded-lg bg-surface-container-highest flex items-center justify-center border border-white/10 shrink-0"
+                >
+                  <span
+                    class="material-symbols-outlined text-secondary text-3xl"
+                    >Collage
+                  </span>
+                </div>
+                <div>
+                  <span
+                    class="font-label-caps text-label-caps text-secondary mb-2 block"
+                    >GRADUATED 2026
+                  </span>
+                  <h3 class="font-headline-md text-2xl mb-2 text-on-surface">
+                    Master of Computer Applications
+                  </h3>
+                  <p class="font-body-lg text-on-surface mb-4">
+                    institute of Computer Studies
+                  </p>
+                  <p class="font-body-md text-on-surface-variant">
+                    Focusing on Cloud Computing and Full Stack Paradigms.
+                    Graduated with Honors (CGPA: 9.0/10.0).
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="mt-8 glass-card p-8 rounded-xl border-l-4 border-secondary"
+            >
+              <h4 class="font-label-caps text-label-caps text-secondary mb-4">
+                CERTIFICATIONS
+              </h4>
+
+              <ul class="space-y-4">
+                <li class="flex items-center justify-between">
+                  <span class="font-body-md text-on-surface"
+                    >MERN Stack from banana info tech</span
+                  >
+                  <span
+                    class="material-symbols-outlined text-on-surface-variant"
+                  >
+                    verified
+                  </span>
+                </li>
+              </ul>
+
+              <a
+                href="Mern stack.pdf"
+                target="_blank"
+                class="inline-block mt-4 px-4 py-2 rounded-lg bg-secondary text-on-primary font-medium hover:opacity-90 transition-all"
+              >
+                View Certificate
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact Section -->
+      <section
+        class="max-w-container-max mx-auto px-gutter py-section-gap scroll-mt-16"
+        id="contact"
+      >
+        <div class="flex flex-col lg:flex-row gap-16 items-start">
+          <div class="lg:w-5/12 space-y-8 entrance-reveal">
+            <div class="space-y-4">
+              <span
+                class="font-label-caps text-label-caps text-secondary tracking-widest"
+                >GET IN TOUCH</span
+              >
+              <h2 class="font-headline-lg text-headline-lg text-on-surface">
+                Let's build something
+                <span class="text-secondary">exceptional</span> together.
+              </h2>
+              <p class="text-on-surface-variant font-body-lg">
+                Currently available for freelance opportunities. If you have a
+                project that needs a sophisticated touch, reach out.
+              </p>
+            </div>
+            <div class="space-y-6 pt-4">
+              <div class="flex items-center gap-6 group">
+                <div
+                  class="h-14 w-14 rounded-xl glass-card flex items-center justify-center text-secondary group-hover:scale-110 transition-transform"
+                >
+                  <span
+                    class="material-symbols-outlined"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >mail</span
+                  >
+                </div>
+                <div>
+                  <p
+                    class="font-label-caps text-[10px] text-on-surface-variant mb-1"
+                  >
+                    EMAIL ME
+                  </p>
+                  <a
+                    class="font-headline-md text-body-lg font-bold hover:text-secondary transition-colors"
+                    href="mailto:kuldipvasava@gmail.com"
+                    >vasavakuldip37@gmail.com</a
+                  >
+                </div>
+              </div>
+              <div class="flex items-center gap-6 group">
+                <div
+                  class="h-14 w-14 rounded-xl glass-card flex items-center justify-center text-secondary group-hover:scale-110 transition-transform"
+                >
+                  <span
+                    class="material-symbols-outlined"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >call</span
+                  >
+                </div>
+                <div>
+                  <p
+                    class="font-label-caps text-[10px] text-on-surface-variant mb-1"
+                  >
+                    CALL ME
+                  </p>
+                  <a
+                    class="font-headline-md text-body-lg font-bold hover:text-secondary transition-colors"
+                    href="tel:+1234567890"
+                    >+91 6353146860</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-7/12 w-full entrance-reveal stagger-1">
+            <div
+              class="glass-card p-8 md:p-12 rounded-2xl relative overflow-hidden"
+            >
+              <form
+                class="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10"
+                id="contact-form"
+              >
+                <div class="space-y-2">
+                  <label
+                    class="font-label-caps text-[11px] text-on-surface-variant ml-1"
+                    for="name"
+                    >YOUR NAME</label
+                  >
+                  <input
+                    class="w-full bg-surface-container-lowest border border-outline-variant focus:border-secondary focus:ring-1 focus:ring-secondary rounded-lg px-4 py-3 text-on-surface font-body-md outline-none transition-all"
+                    id="name"
+                    placeholder="John Doe"
+                    required=""
+                    type="text"
+                  />
+                </div>
+                <div class="space-y-2">
+                  <label
+                    class="font-label-caps text-[11px] text-on-surface-variant ml-1"
+                    for="email"
+                    >YOUR EMAIL</label
+                  >
+                  <input
+                    class="w-full bg-surface-container-lowest border border-outline-variant focus:border-secondary focus:ring-1 focus:ring-secondary rounded-lg px-4 py-3 text-on-surface font-body-md outline-none transition-all"
+                    id="email"
+                    placeholder="john@example.com"
+                    required=""
+                    type="email"
+                  />
+                </div>
+                <div class="md:col-span-2 space-y-2">
+                  <label
+                    class="font-label-caps text-[11px] text-on-surface-variant ml-1"
+                    for="subject"
+                    >SUBJECT</label
+                  >
+                  <input
+                    class="w-full bg-surface-container-lowest border border-outline-variant focus:border-secondary focus:ring-1 focus:ring-secondary rounded-lg px-4 py-3 text-on-surface font-body-md outline-none transition-all"
+                    id="subject"
+                    placeholder="Project Inquiry"
+                    type="text"
+                  />
+                </div>
+                <div class="md:col-span-2 space-y-2">
+                  <label
+                    class="font-label-caps text-[11px] text-on-surface-variant ml-1"
+                    for="message"
+                    >MESSAGE</label
+                  >
+                  <textarea
+                    class="w-full bg-surface-container-lowest border border-outline-variant focus:border-secondary focus:ring-1 focus:ring-secondary rounded-lg px-4 py-3 text-on-surface font-body-md outline-none resize-none transition-all"
+                    id="message"
+                    placeholder="Tell me about your project..."
+                    required=""
+                    rows="5"
+                  ></textarea>
+                </div>
+                <div class="md:col-span-2 pt-4">
+                  <button
+                    class="primary-gradient text-on-primary-fixed font-bold py-4 px-8 rounded-lg flex items-center justify-center gap-3 hover:scale-[1.02] active:scale-[0.98] transition-all w-full md:w-auto btn-shine"
+                    type="submit"
+                  >
+                    SEND MESSAGE
+                    <span class="material-symbols-outlined text-[20px]"
+                      >send</span
+                    >
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="bg-surface-container-lowest border-t border-white/5 w-full py-12 mt-section-gap"
+    >
+      <div
+        class="max-w-container-max mx-auto px-gutter flex flex-col items-center gap-12"
+      >
+        <div
+          class="w-full flex flex-col md:flex-row justify-between items-center gap-8"
+        >
+          <div class="flex flex-col items-center md:items-start">
+            <span
+              class="font-headline-md text-headline-md font-bold text-on-surface mb-2"
+              >Portfolio</span
+            >
+            <p
+              class="text-on-surface-variant text-body-md text-center md:text-left"
+            >
+              Engineering digital experiences with purpose.
+            </p>
+          </div>
+          <div class="flex flex-wrap justify-center gap-8">
+            <a
+              class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors"
+              href="#"
+              >GitHub</a
+            >
+            <a
+              class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors"
+              href="#"
+              >LinkedIn</a
+            >
+            <a
+              class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors"
+              href="#"
+              >Twitter</a
+            >
+            <a
+              class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors"
+              href="mailto:arjun@devportfolio.com"
+              >Email</a
+            >
+          </div>
+          <button
+            class="group flex flex-col items-center gap-2"
+            onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+          >
+            <div
+              class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center group-hover:border-secondary group-hover:bg-secondary/10 transition-all duration-300"
+            >
+              <span
+                class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary transition-colors"
+                >north</span
+              >
+            </div>
+            <span
+              class="font-label-caps text-[10px] text-on-surface-variant tracking-tighter"
+              >BACK TO TOP</span
+            >
+          </button>
+        </div>
+        <div
+          class="w-full flex flex-col md:flex-row justify-between items-center border-t border-white/5 pt-8 gap-4 text-center"
+        >
+          <p
+            class="font-body-md text-body-md text-on-surface-variant opacity-80"
+          >
+            © 2026 MCA Graduate. Built with MERN Stack by VASAVA KULDIP.
+          </p>
+          <div class="flex gap-6">
+            <a
+              class="text-[12px] text-on-surface-variant hover:text-on-surface"
+              href="#"
+              >Privacy Policy</a
+            >
+            <a
+              class="text-[12px] text-on-surface-variant hover:text-on-surface"
+              href="#"
+              >Terms of Service</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Smooth Scroll reveal logic
+        const observerOptions = {
+          threshold: 0.15,
+          rootMargin: "0px 0px -50px 0px",
+        };
+
+        const revealObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        }, observerOptions);
+
+        document
+          .querySelectorAll(".entrance-reveal")
+          .forEach((el) => revealObserver.observe(el));
+
+        // Navigation active state & smooth scroll
+        const sections = document.querySelectorAll('section, div[id="home"]');
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        const navObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const id = entry.target.getAttribute("id");
+                navLinks.forEach((link) => {
+                  link.classList.remove("active");
+                  if (link.getAttribute("href") === `#${id}`) {
+                    link.classList.add("active");
+                  }
+                });
+              }
+            });
+          },
+          {
+            rootMargin: "-20% 0px -70% 0px",
+          },
+        );
+
+        sections.forEach((section) => navObserver.observe(section));
+
+        // Smooth scrolling for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+              const headerOffset = 64;
+              const elementPosition = targetElement.getBoundingClientRect().top;
+              const offsetPosition =
+                elementPosition + window.pageYOffset - headerOffset;
+
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+
+        // Contact form animation
+        const form = document.getElementById("contact-form");
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const btn = form.querySelector("button");
+          const originalHtml = btn.innerHTML;
+          btn.innerHTML =
+            'SENT SUCCESSFULLY <span class="material-symbols-outlined">check_circle</span>';
+          btn.classList.add("bg-green-500/20", "text-green-400");
+
+          setTimeout(() => {
+            btn.innerHTML = originalHtml;
+            btn.classList.remove("bg-green-500/20", "text-green-400");
+            form.reset();
+          }, 3000);
+        });
+      });
+    </script>
+    <script>
+      (function () {
+        emailjs.init({
+          publicKey: "bYydL66AdGcowcYrD",
+        });
+      })();
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("contact-form");
+
+        if (form) {
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            emailjs
+              .send("service_tbkc1fg", "template_oqrpr6g", {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                subject: document.getElementById("subject").value,
+                message: document.getElementById("message").value,
+              })
+              .then(function () {
+                alert("Message sent successfully!");
+                form.reset();
+              })
+              .catch(function (error) {
+                alert("Failed to send message!");
+                console.log(error);
+              });
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
